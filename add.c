@@ -12,6 +12,6 @@ void add(stack_t **stack, unsigned int line_number)
         exit(EXIT_FAILURE);
     }
 
-    (*stack)->next->n += (*stack)->n;  // Add the top two elements
-    pop(stack, line_number);  // Remove the top element
+    (*stack)->next->n += (*stack)->n;
+    pop(stack, line_number);
 }
