@@ -9,24 +9,24 @@
  */
 int main(int argc, char *argv[])
 {
-    FILE *file;
+	FILE *file;
 
-    if (argc != 2)
-    {
-        fprintf(stderr, "USAGE: monty file\n");
-        return (EXIT_FAILURE);
-    }
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		return (EXIT_FAILURE);
+	}
 
-    file = fopen(argv[1], "r");
-    if (file == NULL)
-    {
-        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-        return (EXIT_FAILURE);
-    }
+	file = fopen(argv[1], "r");
+	if (file == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		return (EXIT_FAILURE);
+	}
 
-    execute_monty_code(file);
+	execute_monty_code(file);
 
-    fclose(file);
+	fclose(file);
 
-    return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
